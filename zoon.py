@@ -45,7 +45,7 @@ def info():
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.174 Safari/537.36',
             }
     proxies = {
-            'http': 'http://109.172.110.232:49155',
+            'http': '',
             }
     with open('source-page.html', 'r', encoding="utf-8") as f:
         src = f.read()        

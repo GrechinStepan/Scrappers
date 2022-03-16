@@ -7,7 +7,7 @@ import os
 
 #СБОР СТРАНИЦЫ
 def get_data(url):
-        PATH = 'C:\\Users\\grech\\Desktop\\работа\\chromedriver\\chromedriver' #небходимо сменить директорию на ту, в которой будет лежать ХРОМДРАЙВЕР
+        PATH = '' 
         driver = webdriver.Chrome(PATH)
 
         driver.get(url=url)
@@ -23,7 +23,7 @@ def get_data(url):
         driver.quit()
         get_info()
 
-#СБОР ИНФЫ КВАРТИРЫ
+
 def get_info():             
         wb = Workbook()
         ws = wb.active
@@ -60,11 +60,10 @@ def get_info():
                                 house = param.get_text().split(' ')[1].replace('№', '')
         
                 ws.append([house, num, floor, room, size, plan, price])
-        wb.save(f'/Users/grech/Desktop/ВЕЕР.xlsx') # Необходимо сменить путь, по которму сохранится готовая таблица
+        wb.save(f'') 
        
 def main():
         get_data('https://veer-park.ru/filter/') # Ссылка на сайт 
-        os.remove('C:\\Users\\grech\\Desktop\\работа\\page_source.html') # Необходимо сменить путь, по которму будет удаляться файл page_source.html
-
+        os.remove('')
 main()        
 
